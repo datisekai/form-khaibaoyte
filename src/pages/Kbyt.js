@@ -59,7 +59,7 @@ const Kbyt = () => {
       hoTen: Yup.string().required("Required"),
       cmnd: Yup.string()
         .required("Required")
-        .matches(/[0-9]{9,12}/, "CMND 9-12 số"),
+        .matches(/^[0-9]{9,12}$/, "CMND 9-12 số"),
       namSinh: Yup.string()
         .required("Required")
         .matches(
