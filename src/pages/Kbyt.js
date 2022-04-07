@@ -72,10 +72,9 @@ const Kbyt = () => {
       quan: Yup.string().required("Required"),
       xa: Yup.string().required("Required"),
       soNha: Yup.string().required("Required"),
-      dienThoai: Yup.number()
+      dienThoai: Yup.string()
         .required("Required")
-        .min(10, "Phone Invalid 10 - 11 số")
-        .max(11, "Phone Invalid 10 - 11 số"),
+        .matches(/^[0-9]{10,11}$/,'Phone invalid! EX:0886249022'),
       email: Yup.string()
         .required("Required")
         .email("Email Invalid! Ex:datly@gmail.com"),
